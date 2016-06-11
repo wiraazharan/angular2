@@ -1,0 +1,20 @@
+<p>
+  categories works!
+</p>
+
+<pre>
+	{{ categories | json }}
+</pre>
+
+<ul *ngIf="categories" >
+	<button *ngFor="let category of categories">
+	    <a (click)="getJoke(category) "> {{category}} </a>
+	</button>
+</ul>
+
+
+<ul *ngIf="jokes" >
+	<li *ngFor="let item of jokes">
+		{{item.id}} - {{ item.joke}}
+	</li>
+</ul>
